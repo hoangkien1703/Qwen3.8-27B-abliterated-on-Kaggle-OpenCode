@@ -1,0 +1,12 @@
+# Per-run secrets and logs written by kaggle/kaggle_run.py
+kaggle/state.json
+kaggle/run.log
+*.log
+
+# Real OpenCode configs with keys (only the *.example.json files are committed)
+opencode/opencode.json
+opencode/*.local.json
+
+__pycache__/
+*.pyc
+.venv/

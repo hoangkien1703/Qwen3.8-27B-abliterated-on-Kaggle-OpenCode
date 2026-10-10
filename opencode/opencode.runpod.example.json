@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "mygpu/qwen3.8-27b-abliterated",
+  "small_model": "mygpu/qwen3.8-27b-abliterated",
+  "provider": {
+    "mygpu": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "My rented 4090",
+      "options": {
+        "baseURL": "https://<POD_ID>-8080.proxy.runpod.net/v1",
+        "apiKey": "<THE LLAMA_API_KEY YOU SET ON THE POD>"
+      },
+      "models": {
+        "qwen3.8-27b-abliterated": {
+          "name": "Qwen3.8 27B abliterated",
+          "limit": {
+            "context": 65536,
+            "output": 16384
+          }
+        }
+      }
+    }
+  }
+}

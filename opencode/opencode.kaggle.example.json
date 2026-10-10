@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kaggle/huihui_ai/Qwen3.8-abliterated:27b",
+  "small_model": "kaggle/huihui_ai/Qwen3.8-abliterated:27b",
+  "provider": {
+    "kaggle": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Kaggle T4",
+      "options": {
+        "baseURL": "https://<NGROK-SUBDOMAIN>.ngrok-free.app/v1",
+        "apiKey": "<PASSWORD FROM `kaggle_run.py info`>",
+        "headers": {
+          "ngrok-skip-browser-warning": "1"
+        }
+      },
+      "models": {
+        "huihui_ai/Qwen3.8-abliterated:27b": {
+          "name": "Qwen3.8 27B abliterated",
+          "limit": {
+            "context": 65536,
+            "output": 8192
+          },
+          "options": {
+            "reasoningEffort": "none"
+          }
+        }
+      }
+    }
+  }
+}
